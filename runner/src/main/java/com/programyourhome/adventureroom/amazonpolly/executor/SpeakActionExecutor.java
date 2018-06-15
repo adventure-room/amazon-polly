@@ -7,7 +7,7 @@ public class SpeakActionExecutor extends AbstractAmazonPollyExecutor<SpeakAction
 
     @Override
     public void execute(SpeakAction action, ExecutionContext context) {
-        System.out.println(action.character.name + " says: " + action.text);
+        this.getAmazonPolly(context).sayText(action.character.voiceId, action.text);
     }
 
 }

@@ -1,9 +1,9 @@
 package com.programyourhome.adventureroom.module.amazonpolly.dsl.converters;
 
-import com.programyourhome.adventureroom.amazonpolly.model.SpeakAction;
 import com.programyourhome.adventureroom.dsl.regex.MatchResult;
 import com.programyourhome.adventureroom.dsl.regex.RegexActionConverter;
 import com.programyourhome.adventureroom.model.Adventure;
+import com.programyourhome.adventureroom.module.amazonpolly.model.SpeakAction;
 
 public class SpeakActionConverter implements RegexActionConverter<SpeakAction> {
 

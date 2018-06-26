@@ -12,8 +12,7 @@ import com.amazonaws.services.polly.model.OutputFormat;
 import com.amazonaws.services.polly.model.SynthesizeSpeechRequest;
 import com.amazonaws.services.polly.model.SynthesizeSpeechResult;
 import com.amazonaws.services.polly.model.TextType;
-import com.programyourhome.adventureroom.amazonpolly.service.AmazonPolly;
-import com.programyourhome.adventureroom.amazonpolly.service.model.PollyResult;
+import com.programyourhome.adventureroom.module.amazonpolly.service.model.PollyResult;
 
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.advanced.AdvancedPlayer;

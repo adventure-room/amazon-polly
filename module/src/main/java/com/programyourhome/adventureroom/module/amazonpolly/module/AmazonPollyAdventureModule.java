@@ -3,12 +3,12 @@ package com.programyourhome.adventureroom.module.amazonpolly.module;
 import java.util.Arrays;
 import java.util.Collection;
 
-import com.programyourhome.adventureroom.amazonpolly.dsl.converters.SpeakActionConverter;
-import com.programyourhome.adventureroom.amazonpolly.model.characters.PollyCharacter;
-import com.programyourhome.adventureroom.amazonpolly.service.AmazonPolly;
 import com.programyourhome.adventureroom.dsl.regex.AbstractRegexDslAdventureModule;
 import com.programyourhome.adventureroom.dsl.regex.RegexActionConverter;
 import com.programyourhome.adventureroom.model.character.CharacterDescriptor;
+import com.programyourhome.adventureroom.module.amazonpolly.dsl.converters.SpeakActionConverter;
+import com.programyourhome.adventureroom.module.amazonpolly.model.characters.PollyCharacter;
+import com.programyourhome.adventureroom.module.amazonpolly.service.AmazonPolly;
 
 public class AmazonPollyAdventureModule extends AbstractRegexDslAdventureModule {
 

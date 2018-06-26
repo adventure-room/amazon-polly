@@ -1,7 +1,7 @@
-package com.programyourhome.adventureroom.amazonpolly.service;
+package com.programyourhome.adventureroom.module.amazonpolly.service;
 
-import static com.programyourhome.adventureroom.amazonpolly.service.PollyAudioFormat.POLLY_SAMPLE_RATE;
-import static com.programyourhome.adventureroom.amazonpolly.service.PollyAudioFormat.getPollyAudioFormat;
+import static com.programyourhome.adventureroom.module.amazonpolly.service.PollyAudioFormat.POLLY_SAMPLE_RATE;
+import static com.programyourhome.adventureroom.module.amazonpolly.service.PollyAudioFormat.getPollyAudioFormat;
 import static javazoom.jl.player.FactoryRegistry.systemRegistry;
 
 import com.amazonaws.ClientConfiguration;
@@ -12,6 +12,7 @@ import com.amazonaws.services.polly.model.OutputFormat;
 import com.amazonaws.services.polly.model.SynthesizeSpeechRequest;
 import com.amazonaws.services.polly.model.SynthesizeSpeechResult;
 import com.amazonaws.services.polly.model.TextType;
+import com.programyourhome.adventureroom.amazonpolly.service.AmazonPolly;
 import com.programyourhome.adventureroom.amazonpolly.service.model.PollyResult;
 
 import javazoom.jl.decoder.JavaLayerException;

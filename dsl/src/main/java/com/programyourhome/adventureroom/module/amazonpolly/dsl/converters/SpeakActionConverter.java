@@ -1,4 +1,4 @@
-package com.programyourhome.adventureroom.amazonpolly.dsl.converters;
+package com.programyourhome.adventureroom.module.amazonpolly.dsl.converters;
 
 import com.programyourhome.adventureroom.amazonpolly.model.SpeakAction;
 import com.programyourhome.adventureroom.dsl.regex.MatchResult;

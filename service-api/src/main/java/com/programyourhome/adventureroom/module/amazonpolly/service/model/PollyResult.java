@@ -1,4 +1,4 @@
-package com.programyourhome.adventureroom.amazonpolly.service.model;
+package com.programyourhome.adventureroom.module.amazonpolly.service.model;
 
 import java.io.InputStream;
 

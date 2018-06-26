@@ -1,4 +1,4 @@
-package com.programyourhome.adventureroom.amazonpolly.model.characters;
+package com.programyourhome.adventureroom.module.amazonpolly.model.characters;
 
 import com.programyourhome.adventureroom.model.AbstractDescribable;
 import com.programyourhome.adventureroom.model.character.Character;

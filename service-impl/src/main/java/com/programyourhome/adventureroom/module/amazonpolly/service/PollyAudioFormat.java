@@ -1,4 +1,4 @@
-package com.programyourhome.adventureroom.amazonpolly.service;
+package com.programyourhome.adventureroom.module.amazonpolly.service;
 
 import javax.sound.sampled.AudioFormat;
 

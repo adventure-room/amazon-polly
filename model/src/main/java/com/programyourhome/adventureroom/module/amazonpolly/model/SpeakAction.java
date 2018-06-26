@@ -1,7 +1,7 @@
-package com.programyourhome.adventureroom.amazonpolly.model;
+package com.programyourhome.adventureroom.module.amazonpolly.model;
 
-import com.programyourhome.adventureroom.amazonpolly.model.characters.PollyCharacter;
 import com.programyourhome.adventureroom.model.script.action.Action;
+import com.programyourhome.adventureroom.module.amazonpolly.model.characters.PollyCharacter;
 
 public class SpeakAction implements Action {
 

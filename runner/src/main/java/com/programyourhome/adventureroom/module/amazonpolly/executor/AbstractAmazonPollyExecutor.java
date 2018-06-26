@@ -1,4 +1,4 @@
-package com.programyourhome.adventureroom.amazonpolly.executor;
+package com.programyourhome.adventureroom.module.amazonpolly.executor;
 
 import com.programyourhome.adventureroom.amazonpolly.module.AmazonPollyAdventureModule;
 import com.programyourhome.adventureroom.amazonpolly.service.AmazonPolly;

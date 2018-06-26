@@ -1,4 +1,4 @@
-package com.programyourhome.adventureroom.amazonpolly.executor;
+package com.programyourhome.adventureroom.module.amazonpolly.executor;
 
 import com.programyourhome.adventureroom.amazonpolly.model.SpeakAction;
 import com.programyourhome.iotadventure.runner.context.ExecutionContext;

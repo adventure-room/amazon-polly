@@ -1,4 +1,4 @@
-package com.programyourhome.adventureroom.amazonpolly.module;
+package com.programyourhome.adventureroom.module.amazonpolly.module;
 
 import java.util.Arrays;
 import java.util.Collection;

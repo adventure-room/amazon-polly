@@ -1,6 +1,6 @@
-package com.programyourhome.adventureroom.amazonpolly.service;
+package com.programyourhome.adventureroom.module.amazonpolly.service;
 
-import com.programyourhome.adventureroom.amazonpolly.service.model.PollyResult;
+import com.programyourhome.adventureroom.module.amazonpolly.service.model.PollyResult;
 
 public interface AmazonPolly {
 

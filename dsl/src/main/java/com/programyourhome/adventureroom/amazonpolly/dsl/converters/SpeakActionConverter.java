@@ -8,10 +8,15 @@ import com.programyourhome.adventureroom.model.Adventure;
 public class SpeakActionConverter implements RegexActionConverter<SpeakAction> {
 
     @Override
+    public String getRegexLine() {
+        return CHARACTER_ID + " says " + TEXT;
+    }
+
+    @Override
     public SpeakAction convert(MatchResult matchResult, Adventure adventure) {
         SpeakAction action = new SpeakAction();
-        action.character = adventure.getCharacter(matchResult.getValue("id"));
-        action.text = matchResult.getValue("text");
+        action.character = adventure.getCharacter(matchResult.getValue(CHARACTER_ID));
+        action.text = matchResult.getValue(TEXT);
         return action;
     }
 

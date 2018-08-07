@@ -46,6 +46,7 @@ public class AmazonPollyCacheWrapper implements AmazonPolly {
             // step is the last hurdle. But just as the Immerse idea of caching while playing, we could do that here as well.
             // Details: have some kind of (audio) input stream wrapper that forwards bytes read to another output stream,
             // in this case the cache file. In case of stopping before EOF, the cache entry should be deleted. (or rather, never stored)
+            // Update: this mechanism has been implemented in Immerse and is working, see AudioInputStreamWrapper!
             this.cacheService.storeResource(resource, new DataStream(audioInputStream, "audio/pcm"));
         } else {
             // TODO: remove debugging

@@ -1,5 +1,12 @@
 package com.programyourhome.adventureroom.module.amazonpolly.executor;
 
+import java.io.IOException;
+
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
+import javax.sound.sampled.LineUnavailableException;
+
 import com.programyourhome.adventureroom.module.amazonpolly.model.SpeakAction;
 import com.programyourhome.iotadventure.runner.context.ExecutionContext;
 
@@ -7,7 +14,14 @@ public class SpeakActionExecutor extends AbstractAmazonPollyExecutor<SpeakAction
 
     @Override
     public void execute(SpeakAction action, ExecutionContext context) {
-        this.getAmazonPolly(context).sayText(action.character.voiceId, action.text);
+        AudioInputStream audioInputStream = this.getAmazonPolly(context).synthesizeText(action.character.voiceId, action.text);
+        try {
+            Clip clip = AudioSystem.getClip();
+            clip.open(audioInputStream);
+            clip.start();
+        } catch (IOException | LineUnavailableException e) {
+            throw new IllegalStateException("Exception occured during playback", e);
+        }
     }
 
 }

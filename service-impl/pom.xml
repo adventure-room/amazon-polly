@@ -11,6 +11,11 @@
 
     <dependencies>
         <dependency>
+            <groupId>com.programyourhome.adventureroom</groupId>
+            <artifactId>dsl</artifactId>
+            <version>0.0.2-SNAPSHOT</version>
+        </dependency>
+        <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>service-api</artifactId>
             <version>${project.version}</version>
@@ -21,12 +26,5 @@
             <artifactId>aws-java-sdk-polly</artifactId>
             <version>1.11.347</version>
         </dependency>
-
-        <dependency>
-            <groupId>com.googlecode.soundlibs</groupId>
-            <artifactId>jlayer</artifactId>
-            <version>1.0.1-1</version>
-        </dependency>
-
     </dependencies>
 </project>

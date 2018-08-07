@@ -6,6 +6,7 @@ import java.util.Collection;
 import com.programyourhome.adventureroom.dsl.regex.AbstractRegexDslAdventureModule;
 import com.programyourhome.adventureroom.dsl.regex.RegexActionConverter;
 import com.programyourhome.adventureroom.model.character.CharacterDescriptor;
+import com.programyourhome.adventureroom.model.toolbox.Toolbox;
 import com.programyourhome.adventureroom.module.amazonpolly.dsl.converters.SpeakActionConverter;
 import com.programyourhome.adventureroom.module.amazonpolly.model.characters.PollyCharacter;
 import com.programyourhome.adventureroom.module.amazonpolly.service.AmazonPolly;
@@ -14,12 +15,24 @@ public class AmazonPollyAdventureModule extends AbstractRegexDslAdventureModule 
 
     public static final String ID = "amazonpolly";
 
-    private final AmazonPolly amazonPolly;
+    private AmazonPolly amazonPolly;
     private AmazonPollyConfig config;
+    private Toolbox toolbox;
 
     public AmazonPollyAdventureModule() {
         this.amazonPolly = this.loadImpl(AmazonPolly.class);
         this.initConfig();
+    }
+
+    public Toolbox getToolbox() {
+        return this.toolbox;
+    }
+
+    @Override
+    public void setToolbox(Toolbox toolbox) {
+        this.toolbox = toolbox;
+        // Create a cache wrapper around the Amazon Polly service to prevent synthesizing the same audio over and over again.
+        this.amazonPolly = new AmazonPollyCacheWrapper(this.amazonPolly, this.toolbox.getCacheService());
     }
 
     private void initConfig() {

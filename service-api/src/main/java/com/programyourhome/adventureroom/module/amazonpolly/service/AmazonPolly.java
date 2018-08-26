@@ -5,7 +5,6 @@ import javax.sound.sampled.AudioInputStream;
 
 public interface AmazonPolly {
 
-    // TODO: experiment with these values, signed & big endian seems not not to make a difference, why?
     public static final int POLLY_SAMPLE_RATE = 16000;
     public static final int POLLY_SAMPLE_SIZE = 16;
     public static final int POLLY_CHANNELS = 1;

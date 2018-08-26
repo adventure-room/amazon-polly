@@ -5,6 +5,7 @@ import java.util.Collection;
 
 import com.programyourhome.adventureroom.dsl.regex.AbstractRegexDslAdventureModule;
 import com.programyourhome.adventureroom.dsl.regex.RegexActionConverter;
+import com.programyourhome.adventureroom.model.Adventure;
 import com.programyourhome.adventureroom.model.character.CharacterDescriptor;
 import com.programyourhome.adventureroom.model.toolbox.Toolbox;
 import com.programyourhome.adventureroom.module.amazonpolly.dsl.converters.SpeakActionConverter;
@@ -50,6 +51,11 @@ public class AmazonPollyAdventureModule extends AbstractRegexDslAdventureModule 
         this.config.addTask("Connect to Amazon AWS", () -> this.amazonPolly.connect(this.config.region));
     }
 
+    @Override
+    public void start(Adventure adventure) {
+        // No start actions needed.
+    }
+
     public AmazonPolly getAmazonPolly() {
         return this.amazonPolly;
     }
@@ -65,7 +71,7 @@ public class AmazonPollyAdventureModule extends AbstractRegexDslAdventureModule 
     }
 
     @Override
-    public void stop() {
+    public void stop(Adventure adventure) {
         // No stop actions needed.
     }
 

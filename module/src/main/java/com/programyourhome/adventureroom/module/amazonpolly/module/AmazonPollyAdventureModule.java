@@ -7,6 +7,7 @@ import com.programyourhome.adventureroom.dsl.regex.AbstractRegexDslAdventureModu
 import com.programyourhome.adventureroom.dsl.regex.RegexActionConverter;
 import com.programyourhome.adventureroom.model.Adventure;
 import com.programyourhome.adventureroom.model.character.CharacterDescriptor;
+import com.programyourhome.adventureroom.model.execution.ExecutionContext;
 import com.programyourhome.adventureroom.model.toolbox.Toolbox;
 import com.programyourhome.adventureroom.module.amazonpolly.dsl.converters.SpeakActionConverter;
 import com.programyourhome.adventureroom.module.amazonpolly.model.characters.PollyCharacter;
@@ -21,7 +22,7 @@ public class AmazonPollyAdventureModule extends AbstractRegexDslAdventureModule 
     private Toolbox toolbox;
 
     public AmazonPollyAdventureModule() {
-        this.amazonPolly = this.loadImpl(AmazonPolly.class);
+        this.amazonPolly = this.loadApiImpl(AmazonPolly.class);
         this.initConfig();
     }
 
@@ -52,7 +53,7 @@ public class AmazonPollyAdventureModule extends AbstractRegexDslAdventureModule 
     }
 
     @Override
-    public void start(Adventure adventure) {
+    public void start(Adventure adventure, ExecutionContext context) {
         // No start actions needed.
     }
 
@@ -71,7 +72,7 @@ public class AmazonPollyAdventureModule extends AbstractRegexDslAdventureModule 
     }
 
     @Override
-    public void stop(Adventure adventure) {
+    public void stop(Adventure adventure, ExecutionContext context) {
         // No stop actions needed.
     }
 

@@ -7,8 +7,8 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 
+import com.programyourhome.adventureroom.model.execution.ExecutionContext;
 import com.programyourhome.adventureroom.module.amazonpolly.model.SpeakAction;
-import com.programyourhome.iotadventure.runner.context.ExecutionContext;
 
 public class SpeakActionExecutor extends AbstractAmazonPollyExecutor<SpeakAction> {
 

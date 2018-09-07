@@ -1,10 +1,10 @@
 package com.programyourhome.adventureroom.module.amazonpolly.executor;
 
+import com.programyourhome.adventureroom.model.execution.ExecutionContext;
 import com.programyourhome.adventureroom.model.script.action.Action;
 import com.programyourhome.adventureroom.module.amazonpolly.module.AmazonPollyAdventureModule;
 import com.programyourhome.adventureroom.module.amazonpolly.service.AmazonPolly;
 import com.programyourhome.iotadventure.runner.action.executor.ActionExecutor;
-import com.programyourhome.iotadventure.runner.context.ExecutionContext;
 
 public abstract class AbstractAmazonPollyExecutor<A extends Action> implements ActionExecutor<A> {
 

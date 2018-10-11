@@ -11,7 +11,7 @@ public class SpeakActionConverter implements RegexActionConverter<SpeakAction> {
 
     @Override
     public Map<String, String> getRegexMap() {
-        return this.createRegexes(DEFAULT, CHARACTER_ID + " says " + TEXT);
+        return this.createRegexes(DEFAULT, CHARACTER_ID + " speaks " + TEXT);
     }
 
     @Override

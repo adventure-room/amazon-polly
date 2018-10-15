@@ -31,7 +31,8 @@ public class SpeakActionExecutor extends AbstractAmazonPollyExecutor<SpeakAction
     }
 
     @Override
-    public void stop() {
+    public void stop(ExecutionContext context) {
+        IOUtil.waitForCondition(() -> this.clip != null && this.clip.isActive());
         synchronized (this.clip) {
             this.clip.stop();
         }
